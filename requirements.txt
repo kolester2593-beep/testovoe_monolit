@@ -15,6 +15,7 @@ httpx>=0.28.0
 # Тестирование
 pytest>=8.3.3
 pytest-asyncio>=0.24.0
+pytest-cov>=5.0.0
 
 # Линтер
 ruff>=0.8.0
