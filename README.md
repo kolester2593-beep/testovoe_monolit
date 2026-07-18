@@ -99,28 +99,3 @@ uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
         Запуск тестов
 
         pytest tests/ -v --cov=app --cov-report=term-missing
-
-
-        testovoe_monolit/
-├── app/
-│   ├── __init__.py
-│   ├── main.py              # Точка входа (FastAPI)
-│   ├── config.py            # Настройки из .env (pydantic-settings)
-│   ├── models.py            # Pydantic-модели (Request, Response, Error)
-│   └── services/
-│       ├── __init__.py
-│       ├── ai_provider.py   # Интерфейс и реализации AI (Mock + Real)
-│       └── processor.py     # Бизнес-логика обработки
-├── tests/                   # Покрытие тестами > 90%
-│   ├── test_models.py
-│   ├── test_ai_provider.py
-│   ├── test_processor.py
-│   └── test_api.py
-├── docs/
-│   └── flow_diagram.md      # Визуальная схема flow (Mermaid)
-├── scripts/                 # Скрипты для ручной проверки
-├── .env.example             # Шаблон переменных окружения
-├── requirements.txt         # Зависимости
-├── pytest.ini               # Конфигурация тестов
-├── ruff.toml                # Конфигурация линтера
-└── README.md                # Этот файл
