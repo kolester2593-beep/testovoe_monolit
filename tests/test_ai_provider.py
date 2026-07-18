@@ -1,21 +1,15 @@
-"""
-Тесты для AI-провайдеров.
+    #Тесты для AI-провайдеров.
 
-Демонстрируем подход QA Engineer к тестированию сервисного слоя.
-"""
 
 import pytest
 from app.services.ai_provider import MockAIClient, create_ai_client
 from app.models import RequestType
 
 
-# ============================================================================
 # Тесты для MockAIClient
-# ============================================================================
 
 
 class TestMockAIClient:
-    """Тесты мок AI-клиента."""
 
     @pytest.fixture
     def mock_client(self):
@@ -100,9 +94,7 @@ class TestMockAIClient:
         assert len(result["summary"]) <= 500
 
 
-# ============================================================================
 # Тесты для Factory
-# ============================================================================
 
 
 class TestCreateAIClient:

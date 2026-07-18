@@ -17,7 +17,7 @@ def main():
     request = ProcessRequest(text="  Не могу войти в систему  ")
     print(f"   Входной текст: '  Не могу войти в систему  '")
     print(f"   После валидации: '{request.text}'")
-    print(f"   ✅ Пробелы удалены")
+    print(f"   Пробелы удалены")
 
     # Тест 2: Валидный ответ
     print("\n2. Создание валидного ответа:")
@@ -31,13 +31,13 @@ def main():
     print(f"   Summary: {response.summary}")
     print(f"   Confidence (до округления): 0.9567")
     print(f"   Confidence (после округления): {response.confidence}")
-    print(f"   ✅ Confidence округлён до 2 знаков")
+    print(f"   Confidence округлён до 2 знаков")
 
     # Тест 3: Сериализация в JSON
     print("\n3. Сериализация ответа в JSON:")
     json_str = response.model_dump_json(indent=2)
     print(json_str)
-    print(f"   ✅ Успешно сериализовано")
+    print(f"   Успешно сериализовано")
 
     # Тест 4: Модель ошибки
     print("\n4. Создание модели ошибки:")
@@ -47,10 +47,10 @@ def main():
     print(f"   Error: {error.error}")
     print(f"   Message: {error.message}")
     print(f"   Details: {error.details}")
-    print(f"   ✅ Модель ошибки работает")
+    print(f"   Модель ошибки работает")
 
     print("\n" + "=" * 60)
-    print("Все тесты пройдены успешно! ✅")
+    print("Все тесты пройдены успешно!")
     print("=" * 60)
 
 

@@ -3,7 +3,7 @@ target-version = "py39"
 
 [lint]
 select = ["E", "F", "I", "W", "UP"]
-ignore = ["E501"] # Игнорируем слишком длинные строки, если они читаемы
+ignore = ["E501"]
 
 [lint.isort]
 known-first-party = ["app", "tests"]

@@ -1,7 +1,5 @@
 """
 Тесты для Pydantic моделей.
-
-Демонстрируем подход QA Engineer к тестированию моделей данных.
 """
 
 import pytest
@@ -9,9 +7,7 @@ from pydantic import ValidationError
 from app.models import ProcessRequest, ProcessResponse, RequestType, ErrorResponse
 
 
-# ============================================================================
 # Тесты для ProcessRequest
-# ============================================================================
 
 
 class TestProcessRequest:
@@ -53,9 +49,7 @@ class TestProcessRequest:
             ProcessRequest()  # type: ignore
 
 
-# ============================================================================
 # Тесты для ProcessResponse
-# ============================================================================
 
 
 class TestProcessResponse:
@@ -149,9 +143,7 @@ class TestProcessResponse:
         assert '"request_type":"SALES"' in response_json
 
 
-# ============================================================================
 # Тесты для ErrorResponse
-# ============================================================================
 
 
 class TestErrorResponse:
@@ -184,9 +176,7 @@ class TestErrorResponse:
         assert error_dict["details"] is None
 
 
-# ============================================================================
 # Тесты для RequestType Enum
-# ============================================================================
 
 
 class TestRequestType:

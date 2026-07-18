@@ -1,7 +1,5 @@
 """
 Тесты для процессора.
-
-Демонстрируем подход QA Engineer к тестированию бизнес-логики.
 """
 
 import pytest
@@ -10,9 +8,7 @@ from app.services.ai_provider import MockAIClient
 from app.models import ProcessRequest, ProcessResponse, RequestType
 
 
-# ============================================================================
 # Тесты для TextProcessor
-# ============================================================================
 
 
 class TestTextProcessor:
@@ -60,9 +56,7 @@ class TestTextProcessor:
         assert response.is_processed_by_mock is True
 
 
-# ============================================================================
 # Тесты для глобального процессора (синглтон)
-# ============================================================================
 
 
 class TestGetProcessor:
